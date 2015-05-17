@@ -1,0 +1,261 @@
+﻿
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<title>[name]</title>
+<head>
+<link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href=' http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<style>
+	body{
+		background-color: #FFFAFA;
+	}
+	.textds{
+		font-family:"Droid Sans";
+	}
+	.textcan{
+		font-family:"Cantarell";
+	}
+	#headersub{
+		text-align:center; 
+	}
+	#headermain{
+		text-align:center;
+	}
+	#main{
+		background-color:#DEB887;
+	}
+	#maintitle{
+		text-align:center; 
+		font-size:50px;
+		color:#fff;
+	}
+	#mainsub{
+		margin-top:-2%;
+		text-align:center;
+		font-size:small;
+		color:#fff;
+	}
+	#btn-more{
+		width:20%;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	#img-horsehead{
+		width:15%;
+		float:left;
+		margin-top:8%;
+	}
+	#img-rider{
+		width:15%;
+		float:right;
+		margin-top:8%;
+	}
+	#info{
+		margin-top:5%;
+	}
+	#title-info{
+		width:10%;
+		float:left;
+		margin-top:-2%;
+		margin-left:45%;
+		display: inline-block;
+	}
+	#selfie{
+		width:27%;
+		float:right;
+		margin-right:15%;
+		margin-top:8%;
+	}
+	#infocontent{
+		font-size:large;
+		float:left;
+		margin-left:5%;
+		margin-top:8%;
+	}
+	#paint{
+		margin-top:4%;
+	}
+	#title-paint{
+		width:14%;
+		float:left;
+		margin-top:-2%;
+		margin-left:45%;
+		display: inline-block;
+	}
+	#btn-infomore{
+		width:20%;
+		margin-top:4%;
+		margin-left:40%;
+	}
+	.circleimg{
+		margin-top:8%;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		-ms-border-radius: 50%;
+		-o-border-radius: 50%;
+		border-radius: 50%;
+	}
+	#city1,#city2,#city3{
+		margin-left:9%;
+		width:22%;
+	}
+	#citycontent1,#citycontent2,#citycontent3{
+		float:left;
+		margin-left:9%;
+	}
+	#btn-paintmore{
+		width:20%;
+		margin-top:4%;
+		margin-left:40%;
+	}
+</style>
+<script type="text/javascript">
+			function morehover(element) {
+    			element.setAttribute('src', 'img/btn-more2.png');
+			}
+			function moreout(element) {
+    			element.setAttribute('src', 'img/btn-more1.png');
+			}
+			$(function(){ 
+				// 幫 a.abgne_gotoheader 加上 click 事件
+				$('a.gotoinfo').click(function(){
+					// 讓捲軸用動畫的方式移動到 0 的位置
+					// 感謝網友 sam 修正 Opera 問題
+					var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+					$body.animate({
+						scrollTop: 620
+					}, 700);
+		
+					return false;
+				});
+			});
+			$(function(){ 
+				// 幫 a.abgne_gotoheader 加上 click 事件
+				$('a.gotopaint').click(function(){
+					// 讓捲軸用動畫的方式移動到 0 的位置
+					// 感謝網友 sam 修正 Opera 問題
+					var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+					$body.animate({
+						scrollTop: 1460
+					}, 700);
+		
+					return false;
+				});
+			});
+			$(function(){ 
+				// 幫 a.abgne_gotoheader 加上 click 事件
+				$('a.gotocontact').click(function(){
+					// 讓捲軸用動畫的方式移動到 0 的位置
+					// 感謝網友 sam 修正 Opera 問題
+					var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+					$body.animate({
+						scrollTop: 2020
+					}, 700);
+		
+					return false;
+				});
+			});
+</script>
+</head>
+<body>
+	<div id="header">
+		<p class="textds" id="headersub">your sub title</p>
+		<h1 class="textds" id="headermain">[NAME OF YOUR PAGE]</h1>
+	</div>
+	<div id="main">
+		<img id="img-horsehead" src="img/img-horsehead.png"  >
+		<img id="img-rider" src="img/img-rider.png"  >
+		<p class="textcan" id="maintitle">a.k.a blablabla</p>
+		<p class="textcan" id="mainsub">i'm an artist i'm an artist i'm an artist i'm an artist detail blablalba
+						<br/>i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>i'm an artisti'm an artistblablablablbal
+						<br/>i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>i'm an artisti'm an artistblablablablbal
+						<br/>i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>i'm an artisti'm an artistblablablablbal
+						<br/>i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>i'm an artisti'm an artistblablablablbal
+						<br/>i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>i'm an artisti'm an artistblablablablbal
+						</p>
+		<p>
+		<a href="#info" class="gotoinfo"><img id="btn-more" src="img/btn-more1.png" onmouseover="morehover(this);" onmouseout="moreout(this);" >
+		</a>
+		</p> 
+	</div>
+	<div id="info">
+		<hr>
+		<img id="title-info" src="img/title-info.png">
+		<p class="textcan" id="infocontent">i'm an artist i'm an artist i'm an artist i'm an artist detail blablalba
+						<br/>     i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>         i'm an artisti'm an artistblablablablbal
+						<br/>      i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>    i'm an artisti'm an artistblablablablbal
+						<br/>      i'm an artisti'm an artisti'm an artistblablalbablabal
+						</br>     i'm an artisti'm an artistblablablablbal</p>
+		<p>
+		<img id="selfie" src="img/selfie.png">
+		<p>
+		<a href="#paint" class="gotopaint"><img id="btn-infomore" src="img/btn-more1.png" onmouseover="morehover(this);" onmouseout="moreout(this);" >
+		</a>
+		</p> 
+	</div>
+	<div id="paint">
+		<hr>
+		<img id="title-paint" src="img/title-paint.png">
+		</br>
+		<div id="paintimg">
+		<img class=" circleimg" id="city1" src="img/city1.jpg">
+		<img class=" circleimg" id="city2" src="img/city2.jpg">
+		<img class=" circleimg" id="city3" src="img/city3.jpg">
+		</div>
+		</br>
+		<div id="painttext">
+		<p class="textcan" id="citycontent1">1i'm an artist i'm an artist i'm an artist
+						<br/>     i'm an artisti'm an artisti'm an artistbla
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblabl
+						</br>     i'm an artisti'm an artistblablablablbal
+						<br/>     i'm an artisti'm an artisti'm an artistbla
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblabl
+						</br>     i'm an artisti'm an artistblablablablbal</p>
+		<p>
+		<p class="textcan" id="citycontent2">2i'm an artist i'm an artist i'm an artist
+						<br/>     i'm an artisti'm an artisti'm an artistbla
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblabl
+						</br>     i'm an artisti'm an artistblablablablbal
+						<br/>     i'm an artisti'm an artisti'm an artistbla
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblabl
+						</br>     i'm an artisti'm an artistblablablablbal</p>
+		<p>
+		<p class="textcan" id="citycontent3">3i'm an artist i'm an artist i'm an artist 
+						<br/>     i'm an artisti'm an artisti'm an artistblabla
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblablal
+						</br>     i'm an artisti'm an artistblablablablbal
+						<br/>     i'm an artisti'm an artisti'm an artistbla
+						</br>       i'm an artisti'm an artistblablablablbal
+						<br/>    i'm an artisti'm an artisti'm an artistblabl
+						</br>     i'm an artisti'm an artistblablablablbal</p>
+		<p>
+		</div>
+		<p>
+		<a href="#contact" class="gotocontact"><img id="btn-paintmore" src="img/btn-more1.png" onmouseover="morehover(this);" onmouseout="moreout(this);" >
+		</a>
+		</p>
+		<div>
+		<img id="contact" src="img/contact.png">
+		</div>
+	</div>
+</body>
+</html>
